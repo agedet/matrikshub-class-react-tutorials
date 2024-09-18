@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 // import { Link } from 'react-router-dom'
 import { LuMenu, LuX } from 'react-icons/lu';
+import { NavLink } from 'react-router-dom';
 
 const links = [
   {
@@ -38,8 +39,8 @@ export default function Nav() {
   return (
     <div className='container mx-auto py-[20px]'>
       <div className='flex justify-between items-center'>
-        <h1>
-          <a href='/' >Jaquar</a>
+        <h1 className='font-bold text-[32px] '>
+          <NavLink to='/' >Jaquar</NavLink>
         </h1>
 
         <nav>
@@ -48,9 +49,9 @@ export default function Nav() {
             <ul className='flex gap-10'>
               {links.map((item, index) => (
                 <li key={index}>
-                  <a href={item.path}>
+                  <NavLink to={item.path}>
                     {item.name}
-                  </a>
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -81,7 +82,7 @@ export default function Nav() {
                 <ul>
                   {links.map((item, index) => (
                     <li key={index}>
-                      <a href={item.path}>{item.name}</a>
+                      <NavLink to={item.path}>{item.name}</NavLink>
                     </li>
                   ))}
                 </ul>

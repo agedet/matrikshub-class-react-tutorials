@@ -5,7 +5,7 @@ import Nav from './components/Nav';
 // import { PersonCard } from './components/PersonCard';
 // import HarryPotter from './components/HarryPotter';
 // import DogsData from './components/DogsData';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import HomeScreen from './pages/HomeScreen';
 import AboutUs from './pages/AboutUs';
 import Books from './pages/Books';
@@ -60,14 +60,13 @@ function App() {
       <Nav />
 
       {/* Display pages */}
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<HomeScreen /> } />
-          <Route path='/about' element={<AboutUs /> } />
-          <Route path='/books' element={<Books />} />
-          <Route path='/contact' element={<Contact /> } />
-        </Routes>
-      </BrowserRouter>
+      
+      <Routes>
+        <Route path='/' element={<HomeScreen /> } />
+        <Route path='/about' element={<AboutUs /> } />
+        <Route path='/books' element={<Books />} />
+        <Route path='/contact' element={<Contact /> } />
+      </Routes>
 
       
 
